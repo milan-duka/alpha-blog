@@ -1,0 +1,81 @@
+<h1 style="color:#2F4F4F;text-align:center">Welcome to our homepage!</h1>
+
+<html lang="en-US" style="background-color:aliceblue;">
+  <head>
+    <title>TryCatch</title>
+    <meta charset="UTF-8">
+    <style>
+      a {text-decoration:none; color:purple}
+      #content { 
+        margin: 0 auto;
+        width: 1100px;
+      }
+      #header {  
+        height: 200px; 
+        padding:10px 0 0 0; 
+        margin:10px 10px 10px 10px; 
+        }
+      #rightside {
+        float: left;
+        width: 510px;
+        margin: 10px 10px 10px 10px;
+        padding:0 0 0 20px;
+      }
+      #leftside {
+        float: right;
+        width: 510px;
+        margin: 10px 10px 10px 10px;
+        padding:0 2px 0 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+    <div id="header" style="border-radius: 20px;background-color:aquamarine; background: url(<%= asset_path 'sky.jpg' %>); background-size:cover">
+      <h1 style="text-align:center; font-size:300%;color:#663399">TryCatch Factory</h1>
+      <h2 style="text-align:center; font-size:150%;color:cornsilk">We are your freelance service.</h2>
+    </div>
+    <div id="leftside" style="border-radius: 20px; background-color:#9370DB;">
+      <p style="text-align:left;font-size:125%;color:white">Yes, that's true. We can do much for you.</p>
+      <h3 style="text-align:left;font-size:110%;color:#191970">If you have some task for us, we are here.</h3>
+      <p style="text-align:left;font-size:120%;color:white">You can alway come to us with your request.</p>
+      <h4 style="text-align:left;font-size:110%;color:#191970">We like to resolve problems.</h4>
+      <p style="text-align:left;font-size:110%;color:white">If we haven't some knowledge we colect it very quick.</p>
+      <h5 style="text-align:left;font-size:110%;color:#191970">There is lot of successfully completed projects behind us.</h5>
+      <p style="text-align:left;font-size:95%;color:white">Yes, we have collaborated with many clients, companies and individues.</p>
+      <h6 title="We're serious! (:" style="text-align:left;font-size:85%;color:#191970">Our <abbr title="Chief Executive Officer">CEO</abbr> is great!*</h6>
+      <p style="text-align:right;font-size:85%;color:white">*This is less important so we use minimal font for that. :)</p>
+    </div>
+    <div id="rightside" style="border-radius: 20px; background-color:#9370DB;">
+      <p style="text-align:center;font-size:150%;color:#2F4F4F"><b>Welcome to our official website!</b></p>
+      <p title="Wix is our tool for web design" style="font-size:110%;text-align:left;color:#191970">There is example of the website builded by us: </p><a href="http://www.hercegovcivrsac.wix.com/official" target="_blank"><p style="text-align:center;font-size:150%">Hercegovci Vršac</p></a>
+      <p title="Illustrator is our tool for logo design" style="font-size:110%;text-align:left;color:#191970">There is example of the logo designed by us: </p> 
+      <p style="text-align:center"><img src="<%= asset_path 'Hostel Centar logo.png' %>" alt="Hostel Centar" style="width:30%; height=30%"></p>
+      <p style="font-size:110%;text-align:left;color:#191970">There is example of the picture taken by us: </p>
+      <p style="text-align:center"><img src="<%= asset_path 'nature.jpg' %>" alt="Nature" style="width:40%; height:40%"></p>
+    </div>
+  <!--  <div style="border-radius: 20px; background-color:#9370DB;"> 
+      <p style="font-size:130%;text-align:left;color:#2F4F4F">We also perform:</p>
+  	<ul style="text-align:left; font-size:110%; font-family:courier; list-style-type:circle;color:white">
+      <b>
+  	  <li>Serbian transcription</li>
+  	  <li>English transcription</li>
+  	  <li>Translation from English to Serbian</li>
+  	  <li>Web scraping</li>
+  	  <li>Data entry</li>
+      </b>
+  	</ul>
+      <p style="font-size:130%;text-align:left;color:white">and many other tasks.</p>
+      </div>
+    <hr>
+    <address style="text-align:center; color:purple; font-size:90%">
+      Written by Milan Duka<br>
+      Visit us at:<br>
+      trycatchfactory.com<br>
+      Vuka Karadzica 8/1, Vrsac<br>
+      Serbia
+    </address> -->
+  </div>
+  </body>
+</html>
+<p style="font-size:150%;text-align:center;padding:300px;margin: 230px 300px 0 300px"><%= link_to 'About', about_path %></p>
