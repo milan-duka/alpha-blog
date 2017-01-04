@@ -6,4 +6,8 @@ class PagesController < ApplicationController
   def about
     
   end
+  
+  def trycatchhome
+    render 'pages/trycatchhome.html'
+  end
 end
