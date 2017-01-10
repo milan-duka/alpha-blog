@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update, :show, :destroy]
+  
+  def index
+    @users = User.all
+  end
+  
   def new
     @user = User.new
   end
@@ -29,7 +34,10 @@ class UsersController < ApplicationController
     end
   end
   
-  def index
+  def destroy
+    @user.destroy
+    flash[:danger] = "User account was successfully deleted"
+    redirect_to users_path
   end
   
   private
