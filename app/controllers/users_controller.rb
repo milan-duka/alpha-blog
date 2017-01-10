@@ -17,6 +17,9 @@ class UsersController < ApplicationController
   def edit
   end
   
+  def show
+  end
+  
   def update
     if @user.update(user_params)
       flash[:success] = "User data successfully updated"
