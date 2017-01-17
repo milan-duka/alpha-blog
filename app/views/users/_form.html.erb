@@ -8,7 +8,7 @@
           <%= f.label :username %>
         </div>
         <div class="col-sm-8">
-          <%= f.text_field :username, class: "form-control", placeholder: "Enter username", autofocus: true %>
+          <%= f.text_field :username, class: "form-control", placeholder: "Unesi korisničko ime", autofocus: true %>
         </div>
     </div>
     <div class="form-group">
@@ -16,7 +16,7 @@
           <%= f.label :email %>
         </div>
         <div class="col-sm-8">
-          <%= f.email_field :email, class: "form-control", placeholder: "Enter email" %>
+          <%= f.email_field :email, class: "form-control", placeholder: "Unesi email" %>
         </div>
     </div>
     <div class="form-group">
@@ -24,17 +24,17 @@
         <%= f.label :password %>
       </div>
       <div class="col-sm-8">
-        <%= f.password_field :password, class: "form-control", placeholder: "Enter password" %>
+        <%= f.password_field :password, class: "form-control", placeholder: "Unesi šifru" %>
       </div>
     </div>
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-primary btn-lg") %>
+          <%= f.submit(@user.new_record? ? "Registruj se" : "Izmeni nalog", class: "btn btn-primary btn-lg") %>
         </div>
     </div>
     <% end %>
     <div class="col-xs-4 col-xs-offset-4">
-      [ <%= link_to 'Cancel request and return to homepage', root_path %> ]
+      [ <%= link_to 'Otkaži zahtev i vrati se na početnu stranu', root_path %> ]
     </div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-<h1 align="center">All Alpha Bloggers</h1>
+<h1 align="center">Svi Kibitz Fenster Blogeri</h1>
 <div align="center">
   <%= will_paginate %>
   <% @users.each do |usr| %>
@@ -9,10 +9,10 @@
           <li class="article-title">
             <%= link_to usr.username, user_path(usr) %>
           </li>
-          <li><small><%= pluralize(usr.articles.count, "article") if usr.articles %></small></li>
+          <li><small>broj objava: <%= usr.articles.count %></small></li>
           <% if logged_in? && current_user.admin? %>
-            <li><%= link_to "Delete this user", user_path(usr), method: :delete, 
-                data: {confirm: "Are you sure you want to delete user and all his articles?"}, class: "btn btn-xs btn-danger" %></li>
+            <li><%= link_to "Obriši korisnika", user_path(usr), method: :delete, 
+                data: {confirm: "Da li si siguran da želiš da obrišeš korisnika i sve njegove objave?"}, class: "btn btn-xs btn-danger" %></li>
           <% end %>
         </div>
       </div>

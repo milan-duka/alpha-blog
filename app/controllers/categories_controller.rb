@@ -13,7 +13,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      flash[:success] = "New category is successfuly created"
+      flash[:success] = "Nova kategorija je uspešno kreirana"
       redirect_to categories_path
     else
       render 'new'
@@ -25,7 +25,7 @@ class CategoriesController < ApplicationController
   
   def update
     if @category.update(category_params)
-      flash[:success] = "Category was successfully updated"
+      flash[:success] = "Nova kategorija je uspešno izmenjena"
       redirect_to category_path(@category)
     else
       render 'edit'
@@ -47,7 +47,7 @@ class CategoriesController < ApplicationController
   
   def require_admin
     if !logged_in? || (logged_in? and !current_user.admin?)
-      flash[:danger] = "Only admins can perform that action"
+      flash[:danger] = "Samo administratori mogu da izvrše ovu akciju"
       redirect_to categories_path
     end
   end

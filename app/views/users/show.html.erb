@@ -1,10 +1,10 @@
-<h2 align="center">Welcome to <%= @user.username %>'s page</h2>
+<h2 align="center">Dobrodošao na stranicu korisnika <%= @user.username %></h2>
 <div class="row">
   <div class="col-md-4 col-md-offset-4 center">
     <%= gravatar_for @user, size: 150 %>
   </div>
 </div>
-<h4 align="center"><%= @user.username %>'s articles</h4>
+<h4 align="center">Objave korisnika <%= @user.username %></h4>
 <div align="center">
   <%= will_paginate @user_articles %>
 </div>

@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash[:success] = "Welcome to the alpha blog #{@user.username}"
+      flash[:success] = "Dobrodošli na Kibitz Fenster #{@user.username}"
       redirect_to user_path(@user)
     else
       render 'new'
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
   
   def update
     if @user.update(user_params)
-      flash[:success] = "User data successfully updated"
+      flash[:success] = "Korisnički podaci su uspešno sačuvani"
       redirect_to articles_path
     else
       render 'edit'
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
   
   def destroy
     @user.destroy
-    flash[:danger] = "User and all article created by user have been deleted"
+    flash[:danger] = "Korisnik i sve njegove objave su uspešno obrisani"
     redirect_to users_path
   end
   
@@ -55,14 +55,14 @@ class UsersController < ApplicationController
   
   def require_same_user
     if current_user != @user && !current_user.admin?
-      flash[:danger] = "You can only edit your own account"
+      flash[:danger] = "Možete da menjate isključivo sopstevni nalog"
       redirect_to root_path
     end
   end
   
   def require_admin
     if logged_in? and !current_user.admin?
-      flash[:danger] = "Only admin users can perform that action"
+      flash[:danger] = "Samo administrator može da izvrši ovu akciju"
       redirect_to root_path
     end
   end
