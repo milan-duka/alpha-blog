@@ -4,7 +4,7 @@
     <div class="panel panel-danger">
       <div class="panel-heading">
         <h2 class="panel-title">
-          <%= pluralize(obj.errors.count, "error") %>
+          <%= "broj grešaka: " + obj.errors.count.to_s + "," %>
           čuvanje objave nije uspelo zbog:
         </h2>
         <div class="display panel-body">

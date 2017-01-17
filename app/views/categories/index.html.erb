@@ -1,6 +1,6 @@
 <h1 align="center">Sve kategorije</h1>
 <div align="center">
-  <%= will_paginate %>
+  <%= will_paginate  previous_label: "« Prethodna", next_label: "Sledeća »" %>
   <% @categories.each do |cat| %>
     <ul class="listing">
       <div class="row">
@@ -13,5 +13,5 @@
       </div>
     </ul>
   <% end %>
-  <%= will_paginate %>
+  <%= will_paginate  previous_label: "« Prethodna", next_label: "Sledeća »" %>
 </div>

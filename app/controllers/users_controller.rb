@@ -54,14 +54,24 @@ class UsersController < ApplicationController
   end
   
   def require_same_user
-    if current_user != @user && !current_user.admin?
-      flash[:danger] = "Možete da menjate isključivo sopstevni nalog"
+    if logged_in?
+      if current_user != @user && !current_user.admin?
+        flash[:danger] = "Možete da menjate isključivo sopstevni nalog"
+        redirect_to root_path
+      end
+    else
+      flash[:danger] = "Morate se ulogovati kako biste izvršili ovu akciju"
       redirect_to root_path
     end
   end
   
   def require_admin
-    if logged_in? and !current_user.admin?
+    if logged_in? 
+      if !current_user.admin?
+        flash[:danger] = "Samo administrator može da izvrši ovu akciju"
+        redirect_to root_path
+      end
+    else
       flash[:danger] = "Samo administrator može da izvrši ovu akciju"
       redirect_to root_path
     end
