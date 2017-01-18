@@ -1,14 +1,14 @@
-<h2 align="center">Dobrodošao na stranicu korisnika <%= @user.username %></h2>
+<h2 align="center">Stranica korisnika <%= @user.username %></h2>
 <div class="row">
   <div class="col-md-4 col-md-offset-4 center">
     <%= gravatar_for @user, size: 150 %>
   </div>
 </div>
-<h4 align="center">Objave korisnika <%= @user.username %></h4>
+<h4 align="center">Sve objave korisnika</h4>
 <div align="center">
-  <%= will_paginate @user_articles %>
+  <%= will_paginate @user_articles, previous_label: "« Prethodna", next_label: "Sledeća »" %>
 </div>
 <%= render "articles/article", obj: @user_articles %>
 <div align="center">
-  <%= will_paginate @user_articles %>
+  <%= will_paginate @user_articles, previous_label: "« Prethodna", next_label: "Sledeća »" %>
 </div>

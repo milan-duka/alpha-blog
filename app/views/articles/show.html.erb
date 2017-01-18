@@ -1,4 +1,4 @@
-<h2 align="center">Naslov: <%= @article.title %></h1>
+<h2 align="center"><%= @article.title %></h1>
 
 <div class="well col-xs-8 col-xs-offset-2">
   <% if @article.user %>
@@ -15,7 +15,7 @@
       </div>
   </ul>
   <% end %>
-  <h4 class="center description"><strong>Detalji:</strong></h4>
+  <!--<h4 class="center description"><strong>Detalji:</strong></h4>-->
   <hr>
   <%= simple_format(@article.description) %>
   <% if @article.categories.any? %>
